@@ -1,0 +1,58 @@
+[
+    {
+        "name": "Red",
+        "acceleration": 2,
+        "skill": 0,
+        "speed": 0,
+        "stamina": -1,
+        "jump": 0
+    },
+    {
+        "name": "Blue",
+        "acceleration": 0,
+        "skill": 2,
+        "speed": 0,
+        "stamina": 0,
+        "jump": -1
+    },
+    {
+        "name": "Pink",
+        "acceleration": -1,
+        "skill": 0,
+        "speed": 2,
+        "stamina": 0,
+        "jump": 0
+    },
+    {
+        "name": "Yellow",
+        "acceleration": 0,
+        "skill": -1,
+        "speed": 0,
+        "stamina": 2,
+        "jump": 0
+    },
+    {
+        "name": "Green",
+        "acceleration": 0,
+        "skill": 0,
+        "speed": -1,
+        "stamina": 0,
+        "jump": 2
+    },
+    {
+        "name": "Black",
+        "acceleration": 0,
+        "skill": 0,
+        "speed": 0,
+        "stamina": 0,
+        "jump": 0
+    },
+    {
+        "name": "White",
+        "acceleration": -2,
+        "skill": -2,
+        "speed": -2,
+        "stamina": -2,
+        "jump": -2
+    }
+]
