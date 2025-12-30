@@ -4,6 +4,7 @@ import { Button, Card, CardContent, Typography, Stack } from "@mui/material";
 
 // #region Data
 import apricorns from "../public/data/apricorns.json";
+import berrys from "../public/data/berrys.json"
 // #endregion
 
 import SelectWithDelete from "./components/SelectWithDelete.jsx";
@@ -13,7 +14,7 @@ import BerryDisplay from "./components/BerryDisplay.jsx";
 function App() {
   const [apricorn, setApricorn] = useState();
 
-  //console.log(apricorns);
+  console.log(apricorn);
 
   // TODO: Add Selectable Berries
   // TOD: Sort Berries by Stat
@@ -31,6 +32,7 @@ function App() {
             id="apricorn-selection"
             items={apricorns}
           />
+          <BerryDisplay selectedBerry={apricorns.find((element) => element.name == apricorn)} />
           <Stack
             sx={{ width: "100%", display: "inline-flex", alignItems: "center" }}
             direction="row"

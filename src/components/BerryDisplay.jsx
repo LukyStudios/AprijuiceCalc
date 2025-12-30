@@ -17,11 +17,11 @@ export default function BerryDisplay({ selectedBerry, ...props }) {
       <CardContent>
         <Typography variant="h2">{selectedBerry.name} Berry</Typography>
         <Grid container spacing={1}>
-          {GridRow("Acceleration", selectedBerry.acceleration)}
-          {GridRow("Skill", selectedBerry.skill)}
-          {GridRow("Speed", selectedBerry.speed)}
-          {GridRow("Stamina", selectedBerry.stamina)}
-          {GridRow("Jump", selectedBerry.jump)}
+          {GridRow("Spicy", selectedBerry.spicy)}
+          {GridRow("Dry", selectedBerry.dry)}
+          {GridRow("Sweet", selectedBerry.sweet)}
+          {GridRow("Bitter", selectedBerry.bitter)}
+          {GridRow("Sour", selectedBerry.sour)}
         </Grid>
       </CardContent>
     </Card>

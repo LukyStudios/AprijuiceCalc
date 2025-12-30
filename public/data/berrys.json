@@ -1,0 +1,538 @@
+[
+    {
+        "name": "Cheri",
+        "spicy": 10,
+        "dry": 0,
+        "sweet": 0,
+        "bitter": 0,
+        "sour": 0
+    },
+    {
+        "name": "Chesto",
+        "spicy": 0,
+        "dry": 10,
+        "sweet": 0,
+        "bitter": 0,
+        "sour": 0
+    },
+    {
+        "name": "Pecha",
+        "spicy": 0,
+        "dry": 0,
+        "sweet": 10,
+        "bitter": 0,
+        "sour": 0
+    },
+    {
+        "name": "Rawst",
+        "spicy": 0,
+        "dry": 0,
+        "sweet": 0,
+        "bitter": 10,
+        "sour": 0
+    },
+    {
+        "name": "Aspear",
+        "spicy": 10,
+        "dry": 0,
+        "sweet": 0,
+        "bitter": 0,
+        "sour": 10
+    },
+    {
+        "name": "Leppa",
+        "spicy": 10,
+        "dry": 0,
+        "sweet": 10,
+        "bitter": 10,
+        "sour": 10
+    },
+    {
+        "name": "Oran",
+        "spicy": 10,
+        "dry": 10,
+        "sweet": 0,
+        "bitter": 10,
+        "sour": 10
+    },
+    {
+        "name": "Persim",
+        "spicy": 10,
+        "dry": 10,
+        "sweet": 10,
+        "bitter": 0,
+        "sour": 10
+    },
+    {
+        "name": "Lum",
+        "spicy": 10,
+        "dry": 10,
+        "sweet": 10,
+        "bitter": 10,
+        "sour": 0
+    },
+    {
+        "name": "Sitrus",
+        "spicy": 0,
+        "dry": 10,
+        "sweet": 10,
+        "bitter": 10,
+        "sour": 10
+    },
+    {
+        "name": "Figy",
+        "spicy": 15,
+        "dry": 0,
+        "sweet": 0,
+        "bitter": 0,
+        "sour": 0
+    },
+    {
+        "name": "Wiki",
+        "spicy": 0,
+        "dry": 15,
+        "sweet": 0,
+        "bitter": 0,
+        "sour": 0
+    },
+    {
+        "name": "Mago",
+        "spicy": 0,
+        "dry": 0,
+        "sweet": 15,
+        "bitter": 0,
+        "sour": 0
+    },
+    {
+        "name": "Aguav",
+        "spicy": 0,
+        "dry": 0,
+        "sweet": 0,
+        "bitter": 15,
+        "sour": 0
+    },
+    {
+        "name": "Iapapa",
+        "spicy": 0,
+        "dry": 0,
+        "sweet": 0,
+        "bitter": 0,
+        "sour": 15
+    },
+    {
+        "name": "Razz",
+        "spicy": 10,
+        "dry": 10,
+        "sweet": 0,
+        "bitter": 0,
+        "sour": 0
+    },
+    {
+        "name": "Bluk",
+        "spicy": 0,
+        "dry": 10,
+        "sweet": 10,
+        "bitter": 0,
+        "sour": 0
+    },
+    {
+        "name": "Nanab",
+        "spicy": 0,
+        "dry": 0,
+        "sweet": 10,
+        "bitter": 10,
+        "sour": 0
+    },
+    {
+        "name": "Wepear",
+        "spicy": 0,
+        "dry": 0,
+        "sweet": 0,
+        "bitter": 10,
+        "sour": 10
+    },
+    {
+        "name": "Pinap",
+        "spicy": 10,
+        "dry": 0,
+        "sweet": 0,
+        "bitter": 0,
+        "sour": 10
+    },
+    {
+        "name": "Pomeg",
+        "spicy": 10,
+        "dry": 0,
+        "sweet": 10,
+        "bitter": 10,
+        "sour": 0
+    },
+    {
+        "name": "Kelpsy",
+        "spicy": 0,
+        "dry": 10,
+        "sweet": 0,
+        "bitter": 10,
+        "sour": 10
+    },
+    {
+        "name": "Qualot",
+        "spicy": 10,
+        "dry": 0,
+        "sweet": 10,
+        "bitter": 0,
+        "sour": 10
+    },
+    {
+        "name": "Hondew",
+        "spicy": 10,
+        "dry": 10,
+        "sweet": 0,
+        "bitter": 10,
+        "sour": 0
+    },
+    {
+        "name": "Grepa",
+        "spicy": 0,
+        "dry": 10,
+        "sweet": 10,
+        "bitter": 0,
+        "sour": 10
+    },
+    {
+        "name": "Tamato",
+        "spicy": 20,
+        "dry": 10,
+        "sweet": 0,
+        "bitter": 0,
+        "sour": 0
+    },
+    {
+        "name": "Cornn",
+        "spicy": 0,
+        "dry": 20,
+        "sweet": 10,
+        "bitter": 0,
+        "sour": 0
+    },
+    {
+        "name": "Magost",
+        "spicy": 0,
+        "dry": 0,
+        "sweet": 20,
+        "bitter": 10,
+        "sour": 0
+    },
+    {
+        "name": "Rabuta",
+        "spicy": 0,
+        "dry": 0,
+        "sweet": 0,
+        "bitter": 20,
+        "sour": 10
+    },
+    {
+        "name": "Nomel",
+        "spicy": 10,
+        "dry": 0,
+        "sweet": 0,
+        "bitter": 0,
+        "sour": 20
+    },
+    {
+        "name": "Spelon",
+        "spicy": 30,
+        "dry": 10,
+        "sweet": 0,
+        "bitter": 0,
+        "sour": 0
+    },
+    {
+        "name": "Pamtre",
+        "spicy": 0,
+        "dry": 30,
+        "sweet": 10,
+        "bitter": 0,
+        "sour": 0
+    },
+    {
+        "name": "Watmel",
+        "spicy": 0,
+        "dry": 0,
+        "sweet": 30,
+        "bitter": 10,
+        "sour": 0
+    },
+    {
+        "name": "Durin",
+        "spicy": 0,
+        "dry": 0,
+        "sweet": 0,
+        "bitter": 30,
+        "sour": 10
+    },
+    {
+        "name": "Belue",
+        "spicy": 10,
+        "dry": 0,
+        "sweet": 0,
+        "bitter": 0,
+        "sour": 30
+    },
+    {
+        "name": "Occa",
+        "spicy": 15,
+        "dry": 0,
+        "sweet": 10,
+        "bitter": 0,
+        "sour": 0
+    },
+    {
+        "name": "Passho",
+        "spicy": 0,
+        "dry": 15,
+        "sweet": 0,
+        "bitter": 10,
+        "sour": 0
+    },
+    {
+        "name": "Wacan",
+        "spicy": 0,
+        "dry": 0,
+        "sweet": 15,
+        "bitter": 0,
+        "sour": 10
+    },
+    {
+        "name": "Rindo",
+        "spicy": 10,
+        "dry": 0,
+        "sweet": 0,
+        "bitter": 15,
+        "sour": 0
+    },
+    {
+        "name": "Yache",
+        "spicy": 0,
+        "dry": 10,
+        "sweet": 0,
+        "bitter": 0,
+        "sour": 15
+    },
+    {
+        "name": "Chople",
+        "spicy": 15,
+        "dry": 0,
+        "sweet": 0,
+        "bitter": 10,
+        "sour": 0
+    },
+    {
+        "name": "Kebia",
+        "spicy": 0,
+        "dry": 15,
+        "sweet": 0,
+        "bitter": 0,
+        "sour": 10
+    },
+    {
+        "name": "Shuca",
+        "spicy": 10,
+        "dry": 0,
+        "sweet": 15,
+        "bitter": 0,
+        "sour": 0
+    },
+    {
+        "name": "Coba",
+        "spicy": 0,
+        "dry": 10,
+        "sweet": 0,
+        "bitter": 15,
+        "sour": 0
+    },
+    {
+        "name": "Paypa",
+        "spicy": 0,
+        "dry": 0,
+        "sweet": 10,
+        "bitter": 0,
+        "sour": 15
+    },
+    {
+        "name": "Tanga",
+        "spicy": 20,
+        "dry": 0,
+        "sweet": 0,
+        "bitter": 0,
+        "sour": 10
+    },
+    {
+        "name": "Charti",
+        "spicy": 10,
+        "dry": 20,
+        "sweet": 0,
+        "bitter": 0,
+        "sour": 0
+    },
+    {
+        "name": "Kasib",
+        "spicy": 0,
+        "dry": 10,
+        "sweet": 20,
+        "bitter": 0,
+        "sour": 0
+    },
+    {
+        "name": "Haban",
+        "spicy": 0,
+        "dry": 0,
+        "sweet": 10,
+        "bitter": 20,
+        "sour": 0
+    },
+    {
+        "name": "Colbur",
+        "spicy": 0,
+        "dry": 0,
+        "sweet": 0,
+        "bitter": 10,
+        "sour": 20
+    },
+    {
+        "name": "Babiri",
+        "spicy": 25,
+        "dry": 10,
+        "sweet": 0,
+        "bitter": 0,
+        "sour": 0
+    },
+    {
+        "name": "Chilan",
+        "spicy": 0,
+        "dry": 25,
+        "sweet": 10,
+        "bitter": 0,
+        "sour": 0
+    },
+    {
+        "name": "Liechi",
+        "spicy": 30,
+        "dry": 10,
+        "sweet": 30,
+        "bitter": 0,
+        "sour": 0
+    },
+    {
+        "name": "Ganlon",
+        "spicy": 0,
+        "dry": 30,
+        "sweet": 10,
+        "bitter": 30,
+        "sour": 0
+    },
+    {
+        "name": "Salac",
+        "spicy": 0,
+        "dry": 0,
+        "sweet": 30,
+        "bitter": 10,
+        "sour": 30
+    },
+    {
+        "name": "Petaya",
+        "spicy": 30,
+        "dry": 0,
+        "sweet": 0,
+        "bitter": 30,
+        "sour": 10
+    },
+    {
+        "name": "Apicot",
+        "spicy": 10,
+        "dry": 30,
+        "sweet": 0,
+        "bitter": 0,
+        "sour": 30
+    },
+    {
+        "name": "Lansat",
+        "spicy": 30,
+        "dry": 10,
+        "sweet": 30,
+        "bitter": 10,
+        "sour": 30
+    },
+    {
+        "name": "Starf",
+        "spicy": 30,
+        "dry": 10,
+        "sweet": 30,
+        "bitter": 10,
+        "sour": 30
+    },
+    {
+        "name": "Enigma",
+        "spicy": 40,
+        "dry": 10,
+        "sweet": 0,
+        "bitter": 0,
+        "sour": 0
+    },
+    {
+        "name": "Micle",
+        "spicy": 0,
+        "dry": 40,
+        "sweet": 10,
+        "bitter": 0,
+        "sour": 0
+    },
+    {
+        "name": "Custap",
+        "spicy": 0,
+        "dry": 0,
+        "sweet": 40,
+        "bitter": 10,
+        "sour": 0
+    },
+    {
+        "name": "Jaboca",
+        "spicy": 0,
+        "dry": 0,
+        "sweet": 0,
+        "bitter": 40,
+        "sour": 10
+    },
+    {
+        "name": "Rowap",
+        "spicy": 10,
+        "dry": 0,
+        "sweet": 0,
+        "bitter": 0,
+        "sour": 40
+    },
+    {
+        "name": "Roseli",
+        "spicy": 0,
+        "dry": 0,
+        "sweet": 25,
+        "bitter": 10,
+        "sour": 0
+    },
+    {
+        "name": "Kee",
+        "spicy": 30,
+        "dry": 30,
+        "sweet": 10,
+        "bitter": 10,
+        "sour": 10
+    },
+    {
+        "name": "Marnga",
+        "spicy": 10,
+        "dry": 10,
+        "sweet": 30,
+        "bitter": 30,
+        "sour": 10
+    }
+]
