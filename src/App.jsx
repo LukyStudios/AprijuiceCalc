@@ -10,6 +10,7 @@ import berrys from "../public/data/berrys.json"
 import SelectWithDelete from "./components/SelectWithDelete.jsx";
 import EasySelect from "./components/EasySelect.jsx";
 import BerryDisplay from "./components/BerryDisplay.jsx";
+import ApricornDisplay from "./components/ApricornDisplay.jsx";
 
 function App() {
   const [apricorn, setApricorn] = useState();
@@ -32,41 +33,20 @@ function App() {
             id="apricorn-selection"
             items={apricorns}
           />
-          <BerryDisplay selectedBerry={apricorns.find((element) => element.name == apricorn)} />
+          <ApricornDisplay selectedApricorn={apricorns.find((element) => element.name == apricorn)} />
           <Stack
             sx={{ width: "100%", display: "inline-flex", alignItems: "center" }}
             direction="row"
             spacing={3}
           >
             <BerryDisplay
-              selectedBerry={{
-                name: "Kee",
-                acceleration: 30,
-                skill: 30,
-                speed: 10,
-                stamina: 10,
-                jump: 10,
-              }}
+              selectedBerry={berrys[0]}
             />
             <BerryDisplay
-              selectedBerry={{
-                name: "Kee",
-                acceleration: 30,
-                skill: 30,
-                speed: 10,
-                stamina: 10,
-                jump: 10,
-              }}
+              selectedBerry={berrys[0]}
             />
             <BerryDisplay
-              selectedBerry={{
-                name: "Kee",
-                acceleration: 30,
-                skill: 30,
-                speed: 10,
-                stamina: 10,
-                jump: 10,
-              }}
+              selectedBerry={berrys[0]}
             />
           </Stack>
         </CardContent>
