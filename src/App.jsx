@@ -15,6 +15,9 @@ function App() {
 
   //console.log(apricorns);
 
+  // TODO: Add Selectable Berries
+  // TOD: Sort Berries by Stat
+
   // #region Render
   return (
     <>
