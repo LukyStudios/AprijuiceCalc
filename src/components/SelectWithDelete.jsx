@@ -1,23 +1,35 @@
-import { Select } from "@mui/material"
+import { Button } from "@mui/material";
+import EasySelect from "./EasySelect";
 
-export default function SelectWithDelete(value, setter, label, id, items) {
+export default function SelectWithDelete({
+  value,
+  setter,
+  label,
+  id,
+  items,
+  ...props
+}) {
+//   console.log(items);
+//   console.log(value);
 
-    console.log(items)
+  const resetSelection = (event) => {
+    console.log("Resetting Value");
+    setter("");
+  };
 
-    const handleChange = (event) => {
-        setter(event.target.value)
-    }
-
-    return (
-        items && <Select 
-            labelId={id+"-label"}
-            id={id}
-            value={value}
-            label={label}
-            onChange={handleChange}
-        >
-            {items.map((element) => {<MenuItem value={element.name}>{element.name}</MenuItem>})}
-            
-        </Select>
+  return (
+    items && (
+      <>
+        <EasySelect
+          value={value}
+          setter={setter}
+          label={label}
+          id={id}
+          items={items}
+          props={props}
+        />
+        <Button onClick={resetSelection}>X</Button>
+      </>
     )
+  );
 }
