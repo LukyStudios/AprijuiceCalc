@@ -17,10 +17,14 @@ export default function FlavorBar(stat, flavor, value) {
             <Typography>{stat}</Typography>
         </Grid>
         <Grid size={5}>
-            <LinearProgress variant="determinate" value={flavor / 105 * 100} /> 
+            <LinearProgress variant="determinate" value={flavorToPercentage(flavor)} /> 
         </Grid>
         <Grid size={2}>
             <Typography align='right'>{value}</Typography>
         </Grid>
     </Grid>
+}
+
+function flavorToPercentage (flavor) {
+    return flavor / 105 * 100
 }
