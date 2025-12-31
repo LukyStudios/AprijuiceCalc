@@ -20,7 +20,8 @@ export default function ApricornDisplay({ selectedApricorn, ...props }) {
             src={"../public/images/apricorns/" + selectedApricorn.name + "_Apricorn.png"}
             alt={selectedApricorn.name + " Apricorn"}
             width="64"
-            height="64" />
+            height="64"
+          />
           <Typography variant="h4">{selectedApricorn.name} Apricorn</Typography>
         </div>
         <Stack container spacing={1}>
