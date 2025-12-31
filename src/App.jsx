@@ -27,15 +27,17 @@ function App() {
       <Card>
         <CardContent>
           <Typography variant="h1">Aprijuice Calculator</Typography>
-          <Stack spacing={3}>
-            <EasySelect
-              value={apricorn}
-              setter={setApricorn}
-              label="Apricorn"
-              id="apricorn-selection"
-              items={apricorns}
-            />
-            <ApricornDisplay selectedApricorn={apricorns.find((element) => element.name == apricorn)} />
+          <Stack sx={{ width: "100%", display: "inline-flex", alignItems: "center" }} direction="row" spacing={3}>
+            <div>
+              <EasySelect
+                value={apricorn}
+                setter={setApricorn}
+                label="Apricorn"
+                id="apricorn-selection"
+                items={apricorns}
+              />
+              <ApricornDisplay selectedApricorn={apricorns.find((element) => element.name == apricorn)} />
+            </div>
             <Stack
               sx={{ width: "100%", display: "inline-flex", alignItems: "center" }}
               direction="row"
