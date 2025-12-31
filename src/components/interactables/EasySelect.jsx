@@ -8,9 +8,9 @@ export default function EasySelect({
   items,
   ...props
 }) {
-//   console.log(label);
-//   console.log(items);
-//   console.log(value);
+  //   console.log(label);
+  //   console.log(items);
+  //   console.log(value);
 
   const handleChange = (event) => {
     setter(event.target.value);
@@ -18,7 +18,7 @@ export default function EasySelect({
 
   return (
     items && (
-      <FormControl sx={{ minWidth: 120 }}>
+      <FormControl sx={{ minWidth: 120, width: '25%' }}>
         <InputLabel id={id + "-label"}>{label}</InputLabel>
         <Select
           labelId={id + "-label"}

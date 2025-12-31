@@ -1,6 +1,6 @@
-import {Box, Typography, Divider} from "@mui/material"
+import { Box } from "@mui/material"
 
-export default function GridRow(left, right, ...props) {
+export default function Row({ children, ...props }) {
   return (
     <Box
       sx={{
@@ -11,13 +11,12 @@ export default function GridRow(left, right, ...props) {
         borderRadius: 2,
         bgcolor: "background.paper",
         color: "text.secondary",
-        p: 1,
-        justifyContent: "space-between"
+        padding: 1,
+        justifyContent: "space-between",
       }}
-      props = {props}
+      props={props}
     >
-      <Typography>{left}</Typography>
-      <Typography>{right}</Typography>
+      {children}
     </Box>
   );
 }

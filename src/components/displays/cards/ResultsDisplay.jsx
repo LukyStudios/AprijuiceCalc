@@ -1,16 +1,19 @@
-import { Typography, Stack, Card, CardContent } from "@mui/material";
+import { Typography, Stack, Card, CardContent, Divider } from "@mui/material";
 import { useEffect, useState } from "react";
 
-import GridRow from "./GridRow";
+import Row from "../rows/Row";
+import FlavorBar from "../rows/FlavorBar";
 
 export default function ResultsDisplay({ apricorn, berries }) {
     const [stats, setStats] = useState({})
+    const [apricornName, setApricornName] = useState("")
 
     useEffect(() => {
         if (apricorn == undefined || berries.length <= 0) {
             return
         }
 
+        // Intial Flavor Values
         var spicy = 0, dry = 0, sweet = 0, sour = 0, bitter = 0
 
         // Sum Berry Stats
@@ -36,6 +39,10 @@ export default function ResultsDisplay({ apricorn, berries }) {
         stamina += apricorn.stamina
         jump += apricorn.jump
 
+        if (apricorn != undefined) {
+            setApricornName(apricorn.name)
+        }
+
         // Quality
         var qualityValue = acceleration + skill + speed + stamina + jump
         var qualityLabel = qualityValue > 7 ? "Delicious" : qualityValue > 3 ? "Tasty" : "Plain"
@@ -45,35 +52,37 @@ export default function ResultsDisplay({ apricorn, berries }) {
             {
                 "quality": qualityLabel,
                 "acceleration": acceleration,
+                "spicy": spicy,
                 "skill": skill,
+                "dry": dry,
                 "speed": speed,
+                "sweet": sweet,
                 "stamina": stamina,
-                "jump": jump
+                "sour": sour,
+                "jump": jump,
+                "bitter": bitter
             })
 
     }, [apricorn, berries])
 
     console.log(stats)
 
-    var apricornName = ""
-    if (apricorn != undefined) {
-        apricornName = apricorn.name
-    }
-
-    return stats && <Card>
+    return stats && apricorn && <Card sx={{ minWidth: 290, maxWidth: '25%' }}>
         <CardContent>
-            <Typography variant="h2">{stats.quality} {apricornName} Aprijuice</Typography>
-            <img
-                src={"../public/images/aprijuice/" + stats.quality + "_" + apricornName + "_Aprijuice.png"}
-                alt={stats.quality + " " + apricornName + " Aprijuice"}
-                width="64"
-                height="64" />
+            <div align="center">
+                <img
+                    src={"../public/images/aprijuice/" + stats.quality + "_" + apricornName + "_Aprijuice.png"}
+                    alt={stats.quality + " " + apricornName + " Aprijuice"}
+                    width="64"
+                    height="64" />
+                <Typography variant="h3">{stats.quality} {apricornName} Aprijuice</Typography>
+            </div>
             <Stack container spacing={1}>
-                {GridRow("Acceleration", stats.acceleration)}
-                {GridRow("Skill", stats.skill)}
-                {GridRow("Speed", stats.speed)}
-                {GridRow("Jump", stats.jump)}
-                {GridRow("Stamina", stats.stamina)}
+                <Row>{FlavorBar("Acceleration", stats.spicy, stats.acceleration)}</Row>
+                <Row>{FlavorBar("Skill", stats.dry, stats.skill)}</Row>
+                <Row>{FlavorBar("Speed", stats.sweet, stats.speed)}</Row>
+                <Row>{FlavorBar("Jump", stats.bitter, stats.jump)}</Row>
+                <Row>{FlavorBar("Stamina", stats.sour, stats.stamina)}</Row>
             </Stack>
         </CardContent>
     </Card>
