@@ -17,7 +17,7 @@ export default function BerryDisplay({ selectedBerry, ...props }) {
       <CardContent>
         <div align='center'>
           <img
-            src={"../public/images/berries/" + selectedBerry.name + "_Berry.png"}
+            src={"./images/berries/" + selectedBerry.name + "_Berry.png"}
             alt={selectedBerry.name + " Berry"}
             width="64"
             height="64" />

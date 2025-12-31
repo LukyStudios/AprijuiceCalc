@@ -71,7 +71,7 @@ export default function ResultsDisplay({ apricorn, berries }) {
         <CardContent>
             <div align="center">
                 <img
-                    src={"../public/images/aprijuice/" + stats.quality + "_" + apricornName + "_Aprijuice.png"}
+                    src={"./images/aprijuice/" + stats.quality + "_" + apricornName + "_Aprijuice.png"}
                     alt={stats.quality + " " + apricornName + " Aprijuice"}
                     width="64"
                     height="64" />

@@ -17,7 +17,7 @@ export default function ApricornDisplay({ selectedApricorn, ...props }) {
       <CardContent>
         <div align="center">
           <img
-            src={"../public/images/apricorns/" + selectedApricorn.name + "_Apricorn.png"}
+            src={"./images/apricorns/" + selectedApricorn.name + "_Apricorn.png"}
             alt={selectedApricorn.name + " Apricorn"}
             width="64"
             height="64"
