@@ -10,7 +10,6 @@ import GridRow from "./GridRow";
 export default function BerryDisplay({ selectedBerry, ...props }) {
   console.log(selectedBerry);
 
-  // TODO: Add Image of Berry
   // TODO: Color each stat
   return (
     <Card>

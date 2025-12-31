@@ -12,7 +12,6 @@ import GridRow from "./GridRow";
 export default function ApricornDisplay({ selectedApricorn, ...props }) {
   console.log(selectedApricorn);
 
-  // TODO: Add Image of Berry
   // TODO: Color each stat
   return (
     selectedApricorn && <Card>
