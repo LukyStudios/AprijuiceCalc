@@ -2,9 +2,7 @@ import {
   Card,
   Typography,
   Stack,
-  CardContent,
-  Divider,
-  Box,
+  CardContent
 } from "@mui/material";
 
 import GridRow from "./GridRow";
@@ -19,7 +17,7 @@ export default function ApricornDisplay({ selectedApricorn, ...props }) {
         <Typography variant="h2">{selectedApricorn.name} Apricorn</Typography>
         <img
           src={"../public/images/apricorns/" + selectedApricorn.name + "_Apricorn.png"}
-          alt={selectedApricorn.name + " Berry"}
+          alt={selectedApricorn.name + " Apricorn"}
           width="64"
           height="64" />
         <Stack container spacing={1}>
