@@ -67,7 +67,7 @@ export default function ResultsDisplay({ apricorn, berries }) {
 
     console.log(stats)
 
-    return stats && apricorn && <Card sx={{ minWidth: 290, maxWidth: '25%' }}>
+    return stats && apricorn && <Card sx={{ minWidth: 290, maxWidth: '20%' }}>
         <CardContent>
             <div align="center">
                 <img

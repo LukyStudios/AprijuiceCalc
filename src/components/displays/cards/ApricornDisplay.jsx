@@ -13,7 +13,7 @@ export default function ApricornDisplay({ selectedApricorn, ...props }) {
 
   // TODO: Color each stat
   return (
-    selectedApricorn && <Card sx={{ minWidth: 160, width: '25%' }}>
+    selectedApricorn && <Card sx={{ minWidth: 160, width: '20%' }}>
       <CardContent>
         <div align="center">
           <img
