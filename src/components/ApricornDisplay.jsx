@@ -1,11 +1,13 @@
 import {
   Card,
   Typography,
-  Grid,
+  Stack,
   CardContent,
   Divider,
   Box,
 } from "@mui/material";
+
+import GridRow from "./GridRow";
 
 export default function ApricornDisplay({ selectedApricorn, ...props }) {
   console.log(selectedApricorn);
@@ -16,35 +18,19 @@ export default function ApricornDisplay({ selectedApricorn, ...props }) {
     selectedApricorn && <Card>
       <CardContent>
         <Typography variant="h2">{selectedApricorn.name} Apricorn</Typography>
-        <Grid container spacing={1}>
+        <img
+          src={"../public/images/apricorns/" + selectedApricorn.name + "_Apricorn.png"}
+          alt={selectedApricorn.name + " Berry"}
+          width="64"
+          height="64" />
+        <Stack container spacing={1}>
           {GridRow("Acceleration", selectedApricorn.acceleration)}
           {GridRow("Skill", selectedApricorn.skill)}
           {GridRow("Speed", selectedApricorn.speed)}
           {GridRow("Jump", selectedApricorn.jump)}
           {GridRow("Stamina", selectedApricorn.stamina)}
-        </Grid>
+        </Stack>
       </CardContent>
     </Card>
-  );
-}
-
-function GridRow(left, right) {
-  return (
-    <Box
-      sx={{
-        display: "inline-flex",
-        alignItems: "center",
-        border: "1px solid",
-        borderColor: "divider",
-        borderRadius: 2,
-        bgcolor: "background.paper",
-        color: "text.secondary",
-        p:1
-      }}
-    >
-      <Typography>{left}</Typography>
-      <Divider orientation="vertical" sx={{m:1}}/>
-      <Typography>{right}</Typography>
-    </Box>
   );
 }

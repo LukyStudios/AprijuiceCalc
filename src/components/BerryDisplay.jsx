@@ -1,11 +1,11 @@
 import {
   Card,
   Typography,
-  Grid,
+  Stack,
   CardContent,
-  Divider,
-  Box,
 } from "@mui/material";
+
+import GridRow from "./GridRow";
 
 export default function BerryDisplay({ selectedBerry, ...props }) {
   console.log(selectedBerry);
@@ -16,35 +16,19 @@ export default function BerryDisplay({ selectedBerry, ...props }) {
     <Card>
       <CardContent>
         <Typography variant="h2">{selectedBerry.name} Berry</Typography>
-        <Grid container spacing={1}>
+        <img
+          src={"../public/images/berries/" + selectedBerry.name + "_Berry.png"}
+          alt={selectedBerry.name + " Berry"}
+          width="64"
+          height="64" />
+        <Stack container spacing={1}>
           {GridRow("Spicy", selectedBerry.spicy)}
           {GridRow("Dry", selectedBerry.dry)}
           {GridRow("Sweet", selectedBerry.sweet)}
           {GridRow("Bitter", selectedBerry.bitter)}
           {GridRow("Sour", selectedBerry.sour)}
-        </Grid>
+        </Stack>
       </CardContent>
     </Card>
-  );
-}
-
-function GridRow(left, right) {
-  return (
-    <Box
-      sx={{
-        display: "inline-flex",
-        alignItems: "center",
-        border: "1px solid",
-        borderColor: "divider",
-        borderRadius: 2,
-        bgcolor: "background.paper",
-        color: "text.secondary",
-        p:1
-      }}
-    >
-      <Typography>{left}</Typography>
-      <Divider orientation="vertical" sx={{m:1}}/>
-      <Typography>{right}</Typography>
-    </Box>
   );
 }
