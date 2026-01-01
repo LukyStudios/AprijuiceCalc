@@ -4,8 +4,8 @@ import { Button, Card, CardContent, Typography, Stack } from "@mui/material";
 import "./App.css";
 
 // #region Data
-import apricorns from "../public/data/apricorns.json";
-import berries from "../public/data/berries.json";
+import apricorns from "./data/apricorns.json";
+import berries from "./data/berries.json";
 // #endregion
 
 // #region Components
