@@ -10,8 +10,8 @@ import {
 import "./App.css";
 
 // #region Data
-import apricornsURL from "./data/apricorns.json?url";
-import berriesURL from "./data/berries.json?url";
+const apricornsURL = "/data/apricorns.json";
+const berriesURL = "/data/berries.json";
 // #endregion
 
 // #region Components
@@ -48,7 +48,8 @@ function App() {
     return <Typography color="error"> Error loading Berries </Typography>;
   }
 
-  // console.log(apricorn);
+  console.log(apricorns);
+  console.log(berries)
 
   function addBerry(berry) {
     // Only allow for a max of 3 berries to be selected
