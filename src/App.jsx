@@ -10,8 +10,8 @@ import {
 import "./App.css";
 
 // #region Data
-const apricornsURL = "/data/apricorns.json";
-const berriesURL = "/data/berries.json";
+const apricornsURL = "/AprijuiceCalc/data/apricorns.json"; // Need to include base to point at correct URL
+const berriesURL = "/AprijuiceCalc/data/berries.json";    // Bad practicing hardcoding but Im too tired to figure out the correct solution
 // #endregion
 
 // #region Components
