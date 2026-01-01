@@ -1,4 +1,6 @@
-import { Button, Typography, Stack } from "@mui/material";
+import { IconButton, Typography, Stack } from "@mui/material";
+import AddIcon from '@mui/icons-material/Add';
+import RemoveIcon from '@mui/icons-material/Remove';
 import { useState } from "react";
 
 export default function NumberSpinner({
@@ -26,19 +28,19 @@ export default function NumberSpinner({
   return (
     <Stack
       direction="row"
+      spacing={2}
       sx={{
-        width: "100%",
         justifyContent: "space-between",
         alignItems: "center",
       }}
     >
-      <Button onClick={decrease} disabled={value == min}>
-        -
-      </Button>
+      <IconButton size="small" onClick={decrease} disabled={value == min} variant="contained">
+        <RemoveIcon />
+      </IconButton>
       <Typography>{value}</Typography>
-      <Button onClick={increase} disabled={value == max}>
-        +
-      </Button>
+      <IconButton size="small" onClick={increase} disabled={value == max} variant="contained">
+        <AddIcon />
+      </IconButton>
     </Stack>
   );
 }
