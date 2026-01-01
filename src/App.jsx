@@ -22,7 +22,6 @@ function App() {
 
   console.log(apricorn);
 
-  // TODO: Add Selectable Berries
   function addBerry(berry) {
     // Only allow for a max of 3 berries to be selected
     if (selectedBerries.length < 3) {

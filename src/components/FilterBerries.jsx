@@ -1,14 +1,13 @@
 import { useState, useMemo } from "react";
 import {
-  Accordion,
-  AccordionDetails,
-  AccordionSummary,
   Grid,
   FormGroup,
   FormControlLabel,
   Switch,
   Typography,
   Stack,
+  Card,
+  CardContent,
 } from "@mui/material";
 import BerrySelection from "./displays/cards/BerrySelection";
 import CheckedSelect from "./interactables/CheckedSelect";
@@ -77,7 +76,7 @@ export default function FilterBerries({
         });
         break;
 
-        case sortingOptions[3]: // Most Flavoful
+      case sortingOptions[3]: // Most Flavoful
         tempBerries.sort((a, b) => {
           const aJuice = juiciness(a, selectedFlavor);
           const bJuice = juiciness(b, selectedFlavor);
@@ -118,17 +117,15 @@ export default function FilterBerries({
   // console.log(berries);
 
   return (
-    <Accordion defaultExpanded>
-      <AccordionSummary>
-        <Typography component="span">Berries</Typography>
-      </AccordionSummary>
-      <AccordionDetails>
+    <Card>
+      <CardContent>
+        <Typography variant="h4" component="span">Berries</Typography>
         <Stack
           contianer
           sx={{
             justifyContent: "space-between",
             alignItems: "center",
-            padding:1
+            padding: 1,
           }}
           direction="row"
         >
@@ -181,8 +178,8 @@ export default function FilterBerries({
             })}
           </Grid>
         )}
-      </AccordionDetails>
-    </Accordion>
+      </CardContent>
+    </Card>
   );
 }
 

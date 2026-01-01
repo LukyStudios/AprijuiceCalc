@@ -6,7 +6,6 @@ import DuoTypography from "../rows/DuoTypography";
 export default function ApricornDisplay({ selectedApricorn, ...props }) {
   console.log(selectedApricorn);
 
-  // TODO: Color each stat
   return (
     selectedApricorn && (
       <Card sx={{ minWidth: 160, width: "20%" }}>

@@ -10,8 +10,6 @@ export default function BerrySelection({
   viewFlavor,
   ...props
 }) {
-  // TODO: Color each stat
-
   return (
     berry && (
       <Card>

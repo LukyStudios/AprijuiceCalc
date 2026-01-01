@@ -3,6 +3,7 @@ import { useMemo, useState } from "react";
 
 import Row from "../rows/Row";
 import FlavorBar from "../rows/FlavorBar";
+import flavorThreshold from "../../FlavorThreshold";
 
 export default function ResultsDisplay({ apricorn, berries }) {
   const [apricornName, setApricornName] = useState("");
@@ -125,29 +126,4 @@ export default function ResultsDisplay({ apricorn, berries }) {
       </Card>
     )
   );
-}
-
-function flavorThreshold(flavor) {
-  var statBoost = 0;
-
-  if (flavor >= 15) {
-    statBoost += 1;
-  }
-  if (flavor >= 35) {
-    statBoost += 1;
-  }
-  if (flavor >= 45) {
-    statBoost += 1;
-  }
-  if (flavor >= 55) {
-    statBoost += 1;
-  }
-  if (flavor >= 75) {
-    statBoost += 1;
-  }
-  if (flavor >= 105) {
-    statBoost += 1;
-  }
-
-  return statBoost;
 }

@@ -1,8 +1,6 @@
-import { LinearProgress, Typography, Grid } from "@mui/material";
+import { LinearProgress, Typography, Grid, Divider } from "@mui/material";
 
 export default function FlavorBar({ stat, flavor, value, ...props }) {
-  // TODO: Add tick marks for thresholds
-
   return (
     <Grid
       container
@@ -17,13 +15,60 @@ export default function FlavorBar({ stat, flavor, value, ...props }) {
       <Grid size={5}>
         <Typography>{stat}</Typography>
       </Grid>
-      <Grid size={5}>
+      <Grid sx={{ position: "relative", maxWidth: "105px" }} size={5}>
         <LinearProgress
           sx={{ borderRadius: 1, height: 16 }}
           variant="determinate"
           value={flavorToPercentage(flavor)}
           color={matchColor(stat)}
         />
+        <div style={{ position: "absolute", width: "100%" }}>
+          <Divider
+            sx={{
+              left: flavorToPercentage(15) + "px",
+              position: "absolute",
+              top: "-16px",
+              height: 16,
+            }}
+            orientation="vertical"
+          />
+          <Divider
+            sx={{
+              left: flavorToPercentage(35) + "px",
+              position: "absolute",
+              top: "-16px",
+              height: 16,
+            }}
+            orientation="vertical"
+          />
+          <Divider
+            sx={{
+              left: flavorToPercentage(45) + "px",
+              position: "absolute",
+              top: "-16px",
+              height: 16,
+            }}
+            orientation="vertical"
+          />
+          <Divider
+            sx={{
+              left: flavorToPercentage(55) + "px",
+              position: "absolute",
+              top: "-16px",
+              height: 16,
+            }}
+            orientation="vertical"
+          />
+          <Divider
+            sx={{
+              left: flavorToPercentage(75) + "px",
+              position: "absolute",
+              top: "-16px",
+              height: 16,
+            }}
+            orientation="vertical"
+          />
+        </div>
       </Grid>
       <Grid size={2}>
         <Typography align="right">{value}</Typography>

@@ -6,7 +6,6 @@ import DuoTypography from "../rows/DuoTypography";
 export default function BerryDisplay({ selectedBerry, ...props }) {
   // console.log(selectedBerry);
 
-  // TODO: Color each stat
   return (
     <Card sx={{ minWidth: 120, width: "30%" }}>
       <CardContent>
@@ -21,11 +20,17 @@ export default function BerryDisplay({ selectedBerry, ...props }) {
         </div>
         <br />
         <Stack container spacing={1}>
-          <Row flavor="Spicy">{DuoTypography("Spicy", selectedBerry.spicy)}</Row>
+          <Row flavor="Spicy">
+            {DuoTypography("Spicy", selectedBerry.spicy)}
+          </Row>
           <Row flavor="Dry">{DuoTypography("Dry", selectedBerry.dry)}</Row>
-          <Row flavor="Sweet">{DuoTypography("Sweet", selectedBerry.sweet)}</Row>
+          <Row flavor="Sweet">
+            {DuoTypography("Sweet", selectedBerry.sweet)}
+          </Row>
           <Row flavor="Sour">{DuoTypography("Sour", selectedBerry.sour)}</Row>
-          <Row flavor="Bitter">{DuoTypography("Bitter", selectedBerry.bitter)}</Row>
+          <Row flavor="Bitter">
+            {DuoTypography("Bitter", selectedBerry.bitter)}
+          </Row>
         </Stack>
       </CardContent>
     </Card>
