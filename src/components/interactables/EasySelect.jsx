@@ -28,7 +28,7 @@ export default function EasySelect({
           onChange={handleChange}
         >
           {items.map((element) => {
-            return <MenuItem value={element.name}>{element.name}</MenuItem>;
+            return <MenuItem value={element.name ? element.name : element}>{element.name ? element.name : element}</MenuItem>;
           })}
         </Select>
       </FormControl>

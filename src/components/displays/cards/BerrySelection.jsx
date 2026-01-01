@@ -7,7 +7,7 @@ export default function BerrySelection({
   berry,
   addBerry,
   removeBerry,
-  viewStats,
+  viewFlavor,
   ...props
 }) {
   // TODO: Color each stat
@@ -33,7 +33,7 @@ export default function BerrySelection({
             max='3'
           />
           <Stack spacing={1}>
-            {viewStats && (
+            {viewFlavor && (
               <>
                 <Divider />
                 <Stack container spacing={1}>

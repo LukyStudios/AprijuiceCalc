@@ -12,6 +12,16 @@ import {
 } from "@mui/material";
 import BerrySelection from "./displays/cards/BerrySelection";
 import CheckedSelect from "./interactables/CheckedSelect";
+import EasySelect from "./interactables/EasySelect";
+
+const flavor = ["Spicy", "Sour", "Dry", "Bitter", "Sweet"];
+const sortingOptions = [
+  "Unsorted",
+  "Most Juicy",
+  "Least Juicy",
+  "Most Flavorful",
+  "Least Flavorful",
+];
 
 export default function FilterBerries({
   berries,
@@ -19,47 +29,137 @@ export default function FilterBerries({
   removeBerry,
   ...props
 }) {
-  const [showStats, setShowStats] = useState(true);
+  const [showFlavor, setShowFlavor] = useState(true);
+  const [selectedFlavor, setSelectedFlavor] = useState([...flavor]);
+  const [sorting, setSorting] = useState(sortingOptions[0]);
 
-  function toggleStats() {
-    setShowStats(!showStats);
+  function toggleFlavor() {
+    setShowFlavor(!showFlavor);
   }
 
   const filteredBerries = useMemo(() => {
-    return berries;
-  }, [showStats]);
+    var tempBerries = [...berries];
+
+    // Flavor Filtering (Include if has any listed flavors)
+    tempBerries = tempBerries.filter((berry) =>
+      hasFlavor(berry, selectedFlavor)
+    );
+
+    // Sorting
+    switch (sorting) {
+      case sortingOptions[1]: // Most Juicy
+        tempBerries.sort((a, b) => {
+          const aJuice = juiciness(a, flavor);
+          const bJuice = juiciness(b, flavor);
+
+          if (aJuice > bJuice) {
+            return -1;
+          }
+          if (aJuice < bJuice) {
+            return 1;
+          }
+          return 0; // Must be Equal
+        });
+        break;
+
+      case sortingOptions[2]: // Least Juicy
+        tempBerries.sort((a, b) => {
+          const aJuice = juiciness(a, flavor);
+          const bJuice = juiciness(b, flavor);
+
+          if (aJuice < bJuice) {
+            return -1;
+          }
+          if (aJuice > bJuice) {
+            return 1;
+          }
+          return 0; // Must be Equal
+        });
+        break;
+
+        case sortingOptions[3]: // Most Flavoful
+        tempBerries.sort((a, b) => {
+          const aJuice = juiciness(a, selectedFlavor);
+          const bJuice = juiciness(b, selectedFlavor);
+
+          if (aJuice > bJuice) {
+            return -1;
+          }
+          if (aJuice < bJuice) {
+            return 1;
+          }
+          return 0; // Must be Equal
+        });
+        break;
+
+      case sortingOptions[4]: // Least Juicy
+        tempBerries.sort((a, b) => {
+          const aJuice = juiciness(a, selectedFlavor);
+          const bJuice = juiciness(b, selectedFlavor);
+
+          if (aJuice < bJuice) {
+            return -1;
+          }
+          if (aJuice > bJuice) {
+            return 1;
+          }
+          return 0; // Must be Equal
+        });
+        break;
+
+      default:
+        break;
+    }
+
+    console.log(tempBerries);
+
+    return tempBerries;
+  }, [selectedFlavor, sorting]);
   // console.log(berries);
 
   return (
-    <Accordion>
-      <AccordionSummary component="span">
-        <Typography>Berries</Typography>
+    <Accordion defaultExpanded>
+      <AccordionSummary>
+        <Typography component="span">Berries</Typography>
       </AccordionSummary>
       <AccordionDetails>
-        <CheckedSelect label="Stats" values={['Spicy', 'Sour', 'Dry', 'Bitter', 'Sweet']}/>
         <Stack
           contianer
           sx={{
             justifyContent: "space-between",
             alignItems: "center",
+            padding:1
           }}
           direction="row"
-          spacing={2}
         >
+          <CheckedSelect
+            label="Flavors"
+            id="flavors"
+            values={selectedFlavor}
+            setter={setSelectedFlavor}
+            items={flavor}
+          />
+          <EasySelect
+            value={sorting}
+            setter={setSorting}
+            label="Sorting"
+            id="sorting"
+            items={sortingOptions}
+          />
           <FormGroup>
             <FormControlLabel
               control={
                 <Switch
                   defaultChecked
-                  value={showStats}
-                  onClick={toggleStats}
+                  value={showFlavor}
+                  onClick={toggleFlavor}
                 />
               }
               label="Show Flavor"
             />
           </FormGroup>
         </Stack>
-        {berries && (
+        {filteredBerries && (
           <Grid
             direction="row"
             sx={{
@@ -69,13 +169,13 @@ export default function FilterBerries({
             container
             spacing={1}
           >
-            {berries.map((berry) => {
+            {filteredBerries.map((berry) => {
               return (
                 <BerrySelection
                   berry={berry}
                   addBerry={addBerry}
                   removeBerry={removeBerry}
-                  viewStats={showStats}
+                  viewFlavor={showFlavor}
                 />
               );
             })}
@@ -84,4 +184,23 @@ export default function FilterBerries({
       </AccordionDetails>
     </Accordion>
   );
+}
+
+function hasFlavor(berry, flavors) {
+  let hasFlavor = false;
+
+  flavors.map(
+    (flavor) => (hasFlavor = hasFlavor || berry[flavor.toLowerCase()] > 0)
+  );
+  console.log(berry, hasFlavor);
+
+  return hasFlavor;
+}
+
+function juiciness(berry, flavors) {
+  let juice = 0;
+
+  flavors.map((flavor) => (juice += berry[flavor.toLowerCase()]));
+
+  return juice;
 }
