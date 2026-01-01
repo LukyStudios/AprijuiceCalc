@@ -9,7 +9,7 @@ import Row from "../rows/Row";
 import DuoTypography from "../rows/DuoTypography";
 
 export default function BerryDisplay({ selectedBerry, ...props }) {
-  console.log(selectedBerry);
+  // console.log(selectedBerry);
 
   // TODO: Color each stat
   return (
