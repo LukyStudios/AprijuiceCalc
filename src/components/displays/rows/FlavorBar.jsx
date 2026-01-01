@@ -19,6 +19,7 @@ export default function FlavorBar({ stat, flavor, value, ...props }) {
       </Grid>
       <Grid size={5}>
         <LinearProgress
+          sx={{ borderRadius: 1, height: 16 }}
           variant="determinate"
           value={flavorToPercentage(flavor)}
           color={matchColor(stat)}

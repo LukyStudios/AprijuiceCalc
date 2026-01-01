@@ -29,19 +29,25 @@ export default function BerrySelection({
             addBerry={addBerry}
             removeBerry={removeBerry}
             berry={berry}
-            min='0'
-            max='3'
+            min="0"
+            max="3"
           />
           <Stack spacing={1}>
             {viewFlavor && (
               <>
                 <Divider />
                 <Stack container spacing={1}>
-                  <Row>{DuoTypography("Spicy", berry.spicy)}</Row>
-                  <Row>{DuoTypography("Dry", berry.dry)}</Row>
-                  <Row>{DuoTypography("Sweet", berry.sweet)}</Row>
-                  <Row>{DuoTypography("Bitter", berry.bitter)}</Row>
-                  <Row>{DuoTypography("Sour", berry.sour)}</Row>
+                  <Row flavor="Spicy">
+                    {DuoTypography("Spicy", berry.spicy)}
+                  </Row>
+                  <Row flavor="Dry">{DuoTypography("Dry", berry.dry)}</Row>
+                  <Row flavor="Sweet">
+                    {DuoTypography("Sweet", berry.sweet)}
+                  </Row>
+                  <Row flavor="Bitter">
+                    {DuoTypography("Bitter", berry.bitter)}
+                  </Row>
+                  <Row flavor="Sour">{DuoTypography("Sour", berry.sour)}</Row>
                 </Stack>
               </>
             )}

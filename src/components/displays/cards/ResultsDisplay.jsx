@@ -91,32 +91,33 @@ export default function ResultsDisplay({ apricorn, berries }) {
               {stats.quality} {apricornName} Aprijuice
             </Typography>
           </div>
+          <br />
           <Stack container spacing={1}>
-            <Row>
+            <Row flavor="Acceleration">
               <FlavorBar
                 stat="Acceleration"
                 flavor={stats.spicy}
                 value={stats.acceleration}
               />
             </Row>
-            <Row>
+            <Row flavor="Skill">
               <FlavorBar stat="Skill" flavor={stats.dry} value={stats.skill} />
             </Row>
-            <Row>
+            <Row flavor="Speed">
               <FlavorBar
                 stat="Speed"
                 flavor={stats.sweet}
                 value={stats.speed}
               />
             </Row>
-            <Row>
+            <Row flavor="Stamina">
               <FlavorBar
                 stat="Stamina"
                 flavor={stats.sour}
                 value={stats.stamina}
               />
             </Row>
-            <Row>
+            <Row flavor="Jump">
               <FlavorBar stat="Jump" flavor={stats.bitter} value={stats.jump} />
             </Row>
           </Stack>

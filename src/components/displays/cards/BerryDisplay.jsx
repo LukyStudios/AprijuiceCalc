@@ -21,11 +21,11 @@ export default function BerryDisplay({ selectedBerry, ...props }) {
         </div>
         <br />
         <Stack container spacing={1}>
-          <Row>{DuoTypography("Spicy", selectedBerry.spicy)}</Row>
-          <Row>{DuoTypography("Dry", selectedBerry.dry)}</Row>
-          <Row>{DuoTypography("Sweet", selectedBerry.sweet)}</Row>
-          <Row>{DuoTypography("Sour", selectedBerry.sour)}</Row>
-          <Row>{DuoTypography("Bitter", selectedBerry.bitter)}</Row>
+          <Row flavor="Spicy">{DuoTypography("Spicy", selectedBerry.spicy)}</Row>
+          <Row flavor="Dry">{DuoTypography("Dry", selectedBerry.dry)}</Row>
+          <Row flavor="Sweet">{DuoTypography("Sweet", selectedBerry.sweet)}</Row>
+          <Row flavor="Sour">{DuoTypography("Sour", selectedBerry.sour)}</Row>
+          <Row flavor="Bitter">{DuoTypography("Bitter", selectedBerry.bitter)}</Row>
         </Stack>
       </CardContent>
     </Card>

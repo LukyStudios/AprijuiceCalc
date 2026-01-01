@@ -54,7 +54,9 @@ function App() {
   // #region Render
   return (
     <>
-      <Typography textAlign="center" variant="h2">Apri-Blender</Typography>
+      <Typography textAlign="center" variant="h2">
+        Apri-Blender
+      </Typography>
       <Stack
         sx={{
           justifyContent: "center",
