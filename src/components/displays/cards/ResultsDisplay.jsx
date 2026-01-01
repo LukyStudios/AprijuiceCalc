@@ -8,7 +8,7 @@ export default function ResultsDisplay({ apricorn, berries }) {
   const [apricornName, setApricornName] = useState("");
 
   const stats = useMemo(() => {
-    if (apricorn == undefined ) {
+    if (apricorn == undefined) {
       return;
     }
 
@@ -64,7 +64,7 @@ export default function ResultsDisplay({ apricorn, berries }) {
       sour: sour,
       jump: jump,
       bitter: bitter,
-    }
+    };
   }, [apricorn, berries]);
 
   console.log(stats);
@@ -110,14 +110,14 @@ export default function ResultsDisplay({ apricorn, berries }) {
               />
             </Row>
             <Row>
-              <FlavorBar stat="Jump" flavor={stats.bitter} value={stats.jump} />
-            </Row>
-            <Row>
               <FlavorBar
                 stat="Stamina"
                 flavor={stats.sour}
                 value={stats.stamina}
               />
+            </Row>
+            <Row>
+              <FlavorBar stat="Jump" flavor={stats.bitter} value={stats.jump} />
             </Row>
           </Stack>
         </CardContent>

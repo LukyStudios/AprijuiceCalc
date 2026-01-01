@@ -14,7 +14,7 @@ import BerrySelection from "./displays/cards/BerrySelection";
 import CheckedSelect from "./interactables/CheckedSelect";
 import EasySelect from "./interactables/EasySelect";
 
-const flavor = ["Spicy", "Sour", "Dry", "Bitter", "Sweet"];
+const flavor = ["Spicy", "Dry", "Sweet", "Bitter", "Sour"];
 const sortingOptions = [
   "Unsorted",
   "Most Juicy",

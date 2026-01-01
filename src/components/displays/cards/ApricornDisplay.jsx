@@ -28,8 +28,8 @@ export default function ApricornDisplay({ selectedApricorn, ...props }) {
           <Row>{DuoTypography("Acceleration", selectedApricorn.acceleration)}</Row>
           <Row>{DuoTypography("Skill", selectedApricorn.skill)}</Row>
           <Row>{DuoTypography("Speed", selectedApricorn.speed)}</Row>
-          <Row>{DuoTypography("Jump", selectedApricorn.jump)}</Row>
           <Row>{DuoTypography("Stamina", selectedApricorn.stamina)}</Row>
+          <Row>{DuoTypography("Jump", selectedApricorn.jump)}</Row>
         </Stack>
       </CardContent>
     </Card>
