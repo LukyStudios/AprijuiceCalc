@@ -23,6 +23,7 @@ export default function BerryDisplay({ selectedBerry, ...props }) {
             height="64" />
           <Typography variant="h5">{selectedBerry.name} Berry</Typography>
         </div>
+        <br />
         <Stack container spacing={1}>
           <Row>{DuoTypography("Spicy", selectedBerry.spicy)}</Row>
           <Row>{DuoTypography("Dry", selectedBerry.dry)}</Row>

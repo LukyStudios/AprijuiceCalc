@@ -12,10 +12,18 @@ export default function FilterBerries({
   const [showStats, setShowStats] = useState(true);
 
   // console.log(berries);
-
+  
   return (
     berries && (
-      <Grid container spacing={1}>
+      <Grid
+        direction="row"
+        sx={{
+          justifyContent: "space-around",
+          alignItems: "center",
+        }}
+        container
+        spacing={1}
+      >
         {berries.map((berry) => {
           return (
             <BerrySelection

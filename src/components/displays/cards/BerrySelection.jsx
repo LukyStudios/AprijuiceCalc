@@ -1,4 +1,4 @@
-import { Card, CardContent, Typography, Stack } from "@mui/material";
+import { Card, CardContent, Typography, Stack, Divider } from "@mui/material";
 import Row from "../rows/Row";
 import DuoTypography from "../rows/DuoTypography";
 import NumberSpinner from "../../interactables/NumberSpinner";
@@ -13,28 +13,41 @@ export default function BerrySelection({
   // TODO: Color each stat
 
   return (
-    berry && <Card sx={{ width: "10%" }}>
-      <CardContent>
-        <div align="center">
+    berry && (
+      <Card>
+        <CardContent align="center">
           <img
             src={"./images/berries/" + berry.name + "_Berry.png"}
             alt={berry.name + " Berry"}
-            width="32"
-            height="32"
+            width="64"
+            height="64"
           />
-          <Typography variant="h6">{berry.name} <br /> Berry</Typography>
-        </div>
-        <NumberSpinner label="Amount" min={0} max={3} size="small" defaultValue={0} />
-        {viewStats && (
-          <Stack container spacing={1}>
-            <Row>{DuoTypography("Spicy", berry.spicy)}</Row>
-            <Row>{DuoTypography("Dry", berry.dry)}</Row>
-            <Row>{DuoTypography("Sweet", berry.sweet)}</Row>
-            <Row>{DuoTypography("Bitter", berry.bitter)}</Row>
-            <Row>{DuoTypography("Sour", berry.sour)}</Row>
+          <Typography variant="h6">
+            {berry.name} <br /> Berry
+          </Typography>
+          <NumberSpinner
+            addBerry={addBerry}
+            removeBerry={removeBerry}
+            berry={berry}
+            min='0'
+            max='3'
+          />
+          <Stack spacing={1}>
+            {viewStats && (
+              <>
+                <Divider />
+                <Stack container spacing={1}>
+                  <Row>{DuoTypography("Spicy", berry.spicy)}</Row>
+                  <Row>{DuoTypography("Dry", berry.dry)}</Row>
+                  <Row>{DuoTypography("Sweet", berry.sweet)}</Row>
+                  <Row>{DuoTypography("Bitter", berry.bitter)}</Row>
+                  <Row>{DuoTypography("Sour", berry.sour)}</Row>
+                </Stack>
+              </>
+            )}
           </Stack>
-        )}
-      </CardContent>
-    </Card>
+        </CardContent>
+      </Card>
+    )
   );
 }

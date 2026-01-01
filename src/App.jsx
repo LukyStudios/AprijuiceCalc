@@ -27,22 +27,34 @@ function App() {
     // Only allow for a max of 3 berries to be selected
     if (selectedBerries.length < 3) {
       setSelectedBerries(selectedBerries.concat(berry));
+      return true;
     }
+
+    return false;
   }
 
   function removeBerry(berry) {
-    const index = selectedBerries.find((element) => element.name == berry.name);
+    const index = selectedBerries.findIndex(
+      (element) => element.name == berry.name
+    );
+    console.log(index);
 
     if (index > -1) {
-      setSelectedBerries(selectedBerries.splice(index, 1));
+      var tempArr = [...selectedBerries];
+      tempArr.splice(index, 1);
+
+      setSelectedBerries(tempArr);
+      return true;
     }
+    return false;
   }
   // TOD: Sort Berries by Stat
+  console.log(selectedBerries);
 
   // #region Render
   return (
     <>
-      <Typography variant="h1">Aprijuice Calculator</Typography>
+      <Typography textAlign="center" variant="h2">Apri-Blender</Typography>
       <Stack
         sx={{
           justifyContent: "center",
@@ -65,13 +77,13 @@ function App() {
           direction="row"
           spacing={3}
         >
-          <BerryDisplay selectedBerry={berries[0]} />
-          <BerryDisplay selectedBerry={berries[0]} />
-          <BerryDisplay selectedBerry={berries[0]} />
+          {selectedBerries.map((berry) => {
+            return <BerryDisplay selectedBerry={berry} />;
+          })}
         </Stack>
         <ResultsDisplay
           apricorn={apricorns.find((element) => element.name == apricorn)}
-          berries={[berries[0], berries[0], berries[0]]}
+          berries={selectedBerries}
         />
       </Stack>
       <Card>
@@ -84,7 +96,11 @@ function App() {
             items={apricorns}
           />
         </CardContent>
-        <FilterBerries berries={berries} addBerry={addBerry} removeBerry={removeBerry}/>
+        <FilterBerries
+          berries={berries}
+          addBerry={addBerry}
+          removeBerry={removeBerry}
+        />
       </Card>
     </>
   );

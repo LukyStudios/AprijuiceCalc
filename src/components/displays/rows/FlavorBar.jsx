@@ -1,7 +1,8 @@
 import { LinearProgress, Typography, Grid } from "@mui/material"
 
-export default function FlavorBar(stat, flavor, value) {
+export default function FlavorBar({stat, flavor, value, ...props}) {
     // TODO: Add tick marks for thresholds
+
 
     return <Grid
         container
@@ -26,5 +27,5 @@ export default function FlavorBar(stat, flavor, value) {
 }
 
 function flavorToPercentage (flavor) {
-    return flavor / 105 * 100
+    return Math.min(flavor / 105 * 100, 100)
 }
