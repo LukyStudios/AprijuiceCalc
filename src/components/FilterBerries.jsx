@@ -9,9 +9,9 @@ import {
   Card,
   CardContent,
 } from "@mui/material";
-import BerrySelection from "./displays/cards/BerrySelection";
-import CheckedSelect from "./interactables/CheckedSelect";
-import EasySelect from "./interactables/EasySelect";
+import BerrySelection from "./displays/cards/BerrySelection.jsx";
+import CheckedSelect from "./interactables/CheckedSelect.jsx";
+import EasySelect from "./interactables/EasySelect.jsx";
 
 const flavor = ["Spicy", "Dry", "Sweet", "Bitter", "Sour"];
 const sortingOptions = [

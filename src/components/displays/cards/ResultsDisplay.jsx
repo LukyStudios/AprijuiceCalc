@@ -1,9 +1,9 @@
 import { Typography, Stack, Card, CardContent, Divider } from "@mui/material";
 import { useMemo, useState } from "react";
 
-import Row from "../rows/Row";
-import FlavorBar from "../rows/FlavorBar";
-import flavorThreshold from "../../FlavorThreshold";
+import Row from "../rows/Row.jsx";
+import FlavorBar from "../rows/FlavorBar.jsx";
+import flavorThreshold from "../../FlavorThreshold.jsx";
 
 export default function ResultsDisplay({ apricorn, berries }) {
   const [apricornName, setApricornName] = useState("");

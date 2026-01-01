@@ -1,65 +1,65 @@
 [
-    {
-        "name": "Red",
-        "summary": "[Acceleration+, Stamina-]",
-        "acceleration": 2,
-        "skill": 0,
-        "speed": 0,
-        "stamina": -1,
-        "jump": 0
-    },
-    {
-        "name": "Blue",
-        "summary": "[Skill+, Jump-]",
-        "acceleration": 0,
-        "skill": 2,
-        "speed": 0,
-        "stamina": 0,
-        "jump": -1
-    },
-    {
-        "name": "Pink",
-        "summary": "[Speed+, Acceleration-]",
-        "acceleration": -1,
-        "skill": 0,
-        "speed": 2,
-        "stamina": 0,
-        "jump": 0
-    },
-    {
-        "name": "Yellow",
-        "summary": "[Stamina+, Skill-]",
-        "acceleration": 0,
-        "skill": -1,
-        "speed": 0,
-        "stamina": 2,
-        "jump": 0
-    },
-    {
-        "name": "Green",
-        "summary": "[Jump+, Speed-]",
-        "acceleration": 0,
-        "skill": 0,
-        "speed": -1,
-        "stamina": 0,
-        "jump": 2
-    },
-    {
-        "name": "Black",
-        "summary": "[Neutral]",
-        "acceleration": 0,
-        "skill": 0,
-        "speed": 0,
-        "stamina": 0,
-        "jump": 0
-    },
-    {
-        "name": "White",
-        "summary": "[All-]",
-        "acceleration": -2,
-        "skill": -2,
-        "speed": -2,
-        "stamina": -2,
-        "jump": -2
-    }
+  {
+    "name": "Red",
+    "summary": "[Acceleration+, Stamina-]",
+    "acceleration": 2,
+    "skill": 0,
+    "speed": 0,
+    "stamina": -1,
+    "jump": 0
+  },
+  {
+    "name": "Blue",
+    "summary": "[Skill+, Jump-]",
+    "acceleration": 0,
+    "skill": 2,
+    "speed": 0,
+    "stamina": 0,
+    "jump": -1
+  },
+  {
+    "name": "Pink",
+    "summary": "[Speed+, Acceleration-]",
+    "acceleration": -1,
+    "skill": 0,
+    "speed": 2,
+    "stamina": 0,
+    "jump": 0
+  },
+  {
+    "name": "Yellow",
+    "summary": "[Stamina+, Skill-]",
+    "acceleration": 0,
+    "skill": -1,
+    "speed": 0,
+    "stamina": 2,
+    "jump": 0
+  },
+  {
+    "name": "Green",
+    "summary": "[Jump+, Speed-]",
+    "acceleration": 0,
+    "skill": 0,
+    "speed": -1,
+    "stamina": 0,
+    "jump": 2
+  },
+  {
+    "name": "Black",
+    "summary": "[Neutral]",
+    "acceleration": 0,
+    "skill": 0,
+    "speed": 0,
+    "stamina": 0,
+    "jump": 0
+  },
+  {
+    "name": "White",
+    "summary": "[All-]",
+    "acceleration": -2,
+    "skill": -2,
+    "speed": -2,
+    "stamina": -2,
+    "jump": -2
+  }
 ]

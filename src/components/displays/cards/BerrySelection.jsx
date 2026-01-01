@@ -1,7 +1,8 @@
 import { Card, CardContent, Typography, Stack, Divider } from "@mui/material";
-import Row from "../rows/Row";
-import DuoTypography from "../rows/DuoTypography";
-import NumberSpinner from "../../interactables/NumberSpinner";
+
+import Row from "../rows/Row.jsx";
+import DuoTypography from "../rows/DuoTypography.jsx";
+import NumberSpinner from "../../interactables/NumberSpinner.jsx";
 
 export default function BerrySelection({
   berry,

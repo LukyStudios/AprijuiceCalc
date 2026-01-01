@@ -1,7 +1,7 @@
 import { Card, Typography, Stack, CardContent } from "@mui/material";
 
-import Row from "../rows/Row";
-import DuoTypography from "../rows/DuoTypography";
+import Row from "../rows/Row.jsx";
+import DuoTypography from "../rows/DuoTypography.jsx";
 
 export default function ApricornDisplay({ selectedApricorn, ...props }) {
   console.log(selectedApricorn);

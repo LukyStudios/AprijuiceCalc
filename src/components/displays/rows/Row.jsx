@@ -1,5 +1,5 @@
 import { Box } from "@mui/material";
-import paletteFromFlavor from "../../FlavorPalette";
+import paletteFromFlavor from "../../FlavorPalette.jsx";
 
 export default function Row({ flavor, children, ...props }) {
   return (

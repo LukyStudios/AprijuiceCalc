@@ -1,11 +1,17 @@
-import { useEffect, useState } from "react";
-import { Button, Card, CardContent, Typography, Stack } from "@mui/material";
+import { useState } from "react";
+import {
+  Card,
+  CardContent,
+  Typography,
+  Stack,
+  CircularProgress,
+} from "@mui/material";
 
 import "./App.css";
 
 // #region Data
-import apricorns from "./data/apricorns.json";
-import berries from "./data/berries.json";
+import apricornsURL from "./data/apricorns.json?url";
+import berriesURL from "./data/berries.json?url";
 // #endregion
 
 // #region Components
@@ -14,13 +20,35 @@ import BerryDisplay from "./components/displays/cards/BerryDisplay.jsx";
 import ApricornDisplay from "./components/displays/cards/ApricornDisplay.jsx";
 import ResultsDisplay from "./components/displays/cards/ResultsDisplay.jsx";
 import FilterBerries from "./components/FilterBerries.jsx";
+import useFetch from "./hooks/useFetch.jsx";
 // #endregion
 
 function App() {
   const [apricorn, setApricorn] = useState();
   const [selectedBerries, setSelectedBerries] = useState([]);
 
-  console.log(apricorn);
+  const [apricorns, setApricorns] = useState(null);
+  const [apricornsLoading, setApricornsLoading] = useState(true);
+  const [apricornsError, setApricornsError] = useState(null);
+
+  useFetch(setApricorns, setApricornsLoading, setApricornsError, apricornsURL);
+
+  const [berries, setBerries] = useState(null);
+  const [berriesLoading, setBerriesLoading] = useState(true);
+  const [berriesError, setBerriesError] = useState(null);
+  useFetch(setBerries, setBerriesLoading, setBerriesError, berriesURL);
+
+  if (apricornsLoading || berriesLoading) {
+    return <CircularProgress />;
+  }
+  if (apricornsError) {
+    return <Typography color="error"> Error loading Apricorns</Typography>;
+  }
+  if (berriesError) {
+    return <Typography color="error"> Error loading Berries </Typography>;
+  }
+
+  // console.log(apricorn);
 
   function addBerry(berry) {
     // Only allow for a max of 3 berries to be selected
@@ -48,62 +76,65 @@ function App() {
     return false;
   }
   // TOD: Sort Berries by Stat
-  console.log(selectedBerries);
+  // console.log(selectedBerries);
 
   // #region Render
   return (
-    <>
-      <Typography textAlign="center" variant="h2">
-        Apri-Blender
-      </Typography>
-      <Stack
-        sx={{
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-        direction="row"
-        spacing={3}
-      >
-        <ApricornDisplay
-          selectedApricorn={apricorns.find(
-            (element) => element.name == apricorn
-          )}
-        />
+    apricorns &&
+    berries && (
+      <>
+        <Typography textAlign="center" variant="h2">
+          Apri-Blender
+        </Typography>
         <Stack
           sx={{
-            width: "40%",
             justifyContent: "center",
             alignItems: "center",
           }}
           direction="row"
           spacing={3}
         >
-          {selectedBerries.map((berry) => {
-            return <BerryDisplay selectedBerry={berry} />;
-          })}
-        </Stack>
-        <ResultsDisplay
-          apricorn={apricorns.find((element) => element.name == apricorn)}
-          berries={selectedBerries}
-        />
-      </Stack>
-      <Card>
-        <CardContent>
-          <EasySelect
-            value={apricorn}
-            setter={setApricorn}
-            label="Apricorn"
-            id="apricorn-selection"
-            items={apricorns}
+          <ApricornDisplay
+            selectedApricorn={apricorns.find(
+              (element) => element.name == apricorn
+            )}
           />
-        </CardContent>
-        <FilterBerries
-          berries={berries}
-          addBerry={addBerry}
-          removeBerry={removeBerry}
-        />
-      </Card>
-    </>
+          <Stack
+            sx={{
+              width: "40%",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+            direction="row"
+            spacing={3}
+          >
+            {selectedBerries.map((berry) => {
+              return <BerryDisplay selectedBerry={berry} />;
+            })}
+          </Stack>
+          <ResultsDisplay
+            apricorn={apricorns.find((element) => element.name == apricorn)}
+            berries={selectedBerries}
+          />
+        </Stack>
+        <Card>
+          <CardContent>
+            <EasySelect
+              value={apricorn}
+              setter={setApricorn}
+              label="Apricorn"
+              id="apricorn-selection"
+              items={apricorns}
+            />
+          </CardContent>
+          <FilterBerries
+            berries={berries}
+            addBerry={addBerry}
+            removeBerry={removeBerry}
+          />
+        </Card>
+      </>
+    )
   );
   // #endregion
 }
