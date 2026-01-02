@@ -4,6 +4,8 @@ import RemoveIcon from '@mui/icons-material/Remove';
 import { useState } from "react";
 
 export default function NumberSpinner({
+  value,
+  setValue,
   addBerry,
   removeBerry,
   berry,
@@ -11,8 +13,6 @@ export default function NumberSpinner({
   max,
   ...props
 }) {
-  const [value, setValue] = useState(0);
-
   function increase() {
     if (addBerry(berry)) {
       setValue(Math.min(max, value + 1));

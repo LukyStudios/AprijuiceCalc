@@ -48,8 +48,8 @@ function App() {
     return <Typography color="error"> Error loading Berries </Typography>;
   }
 
-  console.log(apricorns);
-  console.log(berries)
+  // console.log(apricorns);
+  // console.log(berries)
 
   function addBerry(berry) {
     // Only allow for a max of 3 berries to be selected
@@ -65,7 +65,7 @@ function App() {
     const index = selectedBerries.findIndex(
       (element) => element.name == berry.name
     );
-    console.log(index);
+    // console.log(index);
 
     if (index > -1) {
       var tempArr = [...selectedBerries];
@@ -76,7 +76,7 @@ function App() {
     }
     return false;
   }
-  // TOD: Sort Berries by Stat
+
   // console.log(selectedBerries);
 
   // #region Render

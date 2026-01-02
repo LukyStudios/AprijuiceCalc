@@ -110,11 +110,12 @@ export default function FilterBerries({
         break;
     }
 
-    console.log(tempBerries);
+    // console.log(tempBerries);
 
     return tempBerries;
   }, [selectedFlavor, sorting]);
   // console.log(berries);
+  console.log(filteredBerries)
 
   return (
     <Card>
@@ -166,15 +167,14 @@ export default function FilterBerries({
             container
             spacing={1}
           >
-            {filteredBerries.map((berry) => {
-              return (
-                <BerrySelection
-                  berry={berry}
-                  addBerry={addBerry}
-                  removeBerry={removeBerry}
-                  viewFlavor={showFlavor}
-                />
-              );
+            {berries.map((berry) => {
+              return <BerrySelection
+                berry={berry}
+                addBerry={addBerry}
+                removeBerry={removeBerry}
+                viewFlavor={showFlavor}
+                selected={filteredBerries.includes(berry)}
+              />
             })}
           </Grid>
         )}
@@ -189,7 +189,7 @@ function hasFlavor(berry, flavors) {
   flavors.map(
     (flavor) => (hasFlavor = hasFlavor || berry[flavor.toLowerCase()] > 0)
   );
-  console.log(berry, hasFlavor);
+  // console.log(berry, hasFlavor);
 
   return hasFlavor;
 }

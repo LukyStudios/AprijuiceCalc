@@ -25,7 +25,7 @@ export default function FlavorBar({ stat, flavor, value, ...props }) {
         <div style={{ position: "absolute", width: "100%" }}>
           <Divider
             sx={{
-              left: flavorToPercentage(15) + "px",
+              left: "15px",
               position: "absolute",
               top: "-16px",
               height: 16,
@@ -34,7 +34,7 @@ export default function FlavorBar({ stat, flavor, value, ...props }) {
           />
           <Divider
             sx={{
-              left: flavorToPercentage(35) + "px",
+              left: "35px",
               position: "absolute",
               top: "-16px",
               height: 16,
@@ -43,7 +43,7 @@ export default function FlavorBar({ stat, flavor, value, ...props }) {
           />
           <Divider
             sx={{
-              left: flavorToPercentage(45) + "px",
+              left: "45px",
               position: "absolute",
               top: "-16px",
               height: 16,
@@ -52,7 +52,7 @@ export default function FlavorBar({ stat, flavor, value, ...props }) {
           />
           <Divider
             sx={{
-              left: flavorToPercentage(55) + "px",
+              left: "55px",
               position: "absolute",
               top: "-16px",
               height: 16,
@@ -61,7 +61,7 @@ export default function FlavorBar({ stat, flavor, value, ...props }) {
           />
           <Divider
             sx={{
-              left: flavorToPercentage(75) + "px",
+              left: "75px",
               position: "absolute",
               top: "-16px",
               height: 16,

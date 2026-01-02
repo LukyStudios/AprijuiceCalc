@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Card, CardContent, Typography, Stack, Divider } from "@mui/material";
 
 import Row from "../rows/Row.jsx";
@@ -9,10 +10,14 @@ export default function BerrySelection({
   addBerry,
   removeBerry,
   viewFlavor,
+  selected,
   ...props
 }) {
+  const [amount, setAmount] = useState(0);
+  // console.log(berry, selected)
+
   return (
-    berry && (
+    berry && selected && (
       <Card>
         <CardContent align="center">
           <img
@@ -25,6 +30,8 @@ export default function BerrySelection({
             {berry.name} <br /> Berry
           </Typography>
           <NumberSpinner
+            value={amount}
+            setValue={setAmount}
             addBerry={addBerry}
             removeBerry={removeBerry}
             berry={berry}
