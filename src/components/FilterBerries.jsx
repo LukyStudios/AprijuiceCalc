@@ -114,8 +114,9 @@ export default function FilterBerries({
 
     return tempBerries;
   }, [selectedFlavor, sorting]);
+  
   // console.log(berries);
-  console.log(filteredBerries)
+  // console.log(filteredBerries)
 
   return (
     <Card>

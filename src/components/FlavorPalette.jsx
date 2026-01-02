@@ -23,14 +23,14 @@ export default function paletteFromFlavor(flavor) {
         bgcolor: pink["100"],
         color: pink["900"],
       };
-    case "Bitter":
+    case "Sour":
     case "Stamina":
       return {
         borderColor: orange["900"],
         bgcolor: orange["100"],
         color: orange["900"],
       };
-    case "Sour":
+    case "Bitter":
     case "Jump":
       return {
         borderColor: green["900"],

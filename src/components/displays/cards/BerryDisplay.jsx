@@ -27,10 +27,10 @@ export default function BerryDisplay({ selectedBerry, ...props }) {
           <Row flavor="Sweet">
             {DuoTypography("Sweet", selectedBerry.sweet)}
           </Row>
+          <Row flavor="Sour">{DuoTypography("Sour", selectedBerry.sour)}</Row>
           <Row flavor="Bitter">
             {DuoTypography("Bitter", selectedBerry.bitter)}
           </Row>
-          <Row flavor="Sour">{DuoTypography("Sour", selectedBerry.sour)}</Row>
         </Stack>
       </CardContent>
     </Card>

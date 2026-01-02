@@ -21,6 +21,7 @@ import ApricornDisplay from "./components/displays/cards/ApricornDisplay.jsx";
 import ResultsDisplay from "./components/displays/cards/ResultsDisplay.jsx";
 import FilterBerries from "./components/FilterBerries.jsx";
 import useFetch from "./hooks/useFetch.jsx";
+import Footer from "./components/Footer.jsx";
 // #endregion
 
 function App() {
@@ -84,8 +85,8 @@ function App() {
     apricorns &&
     berries && (
       <>
-        <Typography textAlign="center" variant="h2">
-          Apri-Blender
+        <Typography textAlign="center" variant="h3">
+          Cobblemon's Aprijuice Calculator
         </Typography>
         <Stack
           sx={{
@@ -134,6 +135,7 @@ function App() {
             removeBerry={removeBerry}
           />
         </Card>
+        <Footer />
       </>
     )
   );

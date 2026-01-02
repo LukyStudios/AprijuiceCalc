@@ -50,10 +50,10 @@ export default function BerrySelection({
                   <Row flavor="Sweet">
                     {DuoTypography("Sweet", berry.sweet)}
                   </Row>
+                  <Row flavor="Sour">{DuoTypography("Sour", berry.sour)}</Row>
                   <Row flavor="Bitter">
                     {DuoTypography("Bitter", berry.bitter)}
                   </Row>
-                  <Row flavor="Sour">{DuoTypography("Sour", berry.sour)}</Row>
                 </Stack>
               </>
             )}

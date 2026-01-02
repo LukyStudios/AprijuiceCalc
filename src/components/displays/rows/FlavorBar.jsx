@@ -1,4 +1,4 @@
-import { LinearProgress, Typography, Grid, Divider } from "@mui/material";
+import { LinearProgress, Typography, Grid, Divider, Tooltip } from "@mui/material";
 
 export default function FlavorBar({ stat, flavor, value, ...props }) {
   return (
@@ -15,7 +15,9 @@ export default function FlavorBar({ stat, flavor, value, ...props }) {
       <Grid size={5}>
         <Typography>{stat}</Typography>
       </Grid>
+      <Tooltip title={flavor}>
       <Grid sx={{ position: "relative", maxWidth: "105px" }} size={5}>
+        
         <LinearProgress
           sx={{ borderRadius: 1, height: 16 }}
           variant="determinate"
@@ -70,6 +72,7 @@ export default function FlavorBar({ stat, flavor, value, ...props }) {
           />
         </div>
       </Grid>
+      </Tooltip>
       <Grid size={2}>
         <Typography align="right">{value}</Typography>
       </Grid>

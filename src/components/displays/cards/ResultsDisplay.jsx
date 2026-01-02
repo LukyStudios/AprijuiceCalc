@@ -88,7 +88,7 @@ export default function ResultsDisplay({ apricorn, berries }) {
               width="64"
               height="64"
             />
-            <Typography variant="h3">
+            <Typography variant="h4">
               {stats.quality} {apricornName} Aprijuice
             </Typography>
           </div>
