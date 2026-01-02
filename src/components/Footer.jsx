@@ -29,7 +29,7 @@ export default function Footer() {
                     height="20"
                 />
             </a> !
-            <br /> Please report bugs or leave feedback by <a href="https://github.com/lukystudios/aprijuicecalc/issues/new">opening an issue on GitHub</a>
+            <br /> Please report any bugs or leave feedback by <a href="https://github.com/lukystudios/aprijuicecalc/issues/new">opening an issue on GitHub</a>
             <br /> All images & data are copied from Cobblemon's <a href="https://wiki.cobblemon.com/index.php/Aprijuice">Aprijuice</a> & <a href="https://wiki.cobblemon.com/index.php/Seasoning">Seasoning</a> Wikis as of 1.7.1
         </Typography>
     </ Box >
