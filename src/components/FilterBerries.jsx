@@ -8,7 +8,13 @@ import {
   Stack,
   Card,
   CardContent,
+  IconButton,
+  Divider,
 } from "@mui/material";
+import ViewModuleIcon from '@mui/icons-material/ViewModule';
+import TableRowsIcon from '@mui/icons-material/TableRows';
+
+import Row from "./displays/rows/Row.jsx";
 import BerrySelection from "./displays/cards/BerrySelection.jsx";
 import CheckedSelect from "./interactables/CheckedSelect.jsx";
 import EasySelect from "./interactables/EasySelect.jsx";
@@ -31,6 +37,7 @@ export default function FilterBerries({
   const [showFlavor, setShowFlavor] = useState(true);
   const [selectedFlavor, setSelectedFlavor] = useState([...flavor]);
   const [sorting, setSorting] = useState(sortingOptions[0]);
+  const [isGrid, setIsGrid] = useState(true)
 
   function toggleFlavor() {
     setShowFlavor(!showFlavor);
@@ -114,7 +121,7 @@ export default function FilterBerries({
 
     return tempBerries;
   }, [selectedFlavor, sorting]);
-  
+
   // console.log(berries);
   // console.log(filteredBerries)
 
@@ -145,18 +152,29 @@ export default function FilterBerries({
             id="sorting"
             items={sortingOptions}
           />
-          <FormGroup>
-            <FormControlLabel
-              control={
-                <Switch
-                  defaultChecked
-                  value={showFlavor}
-                  onClick={toggleFlavor}
-                />
-              }
-              label="Show Flavor"
-            />
-          </FormGroup>
+          <>
+            <FormGroup>
+              <FormControlLabel
+                control={
+                  <Switch
+                    defaultChecked
+                    value={showFlavor}
+                    onClick={toggleFlavor}
+                  />
+                }
+                label="Show Flavor"
+              />
+            </FormGroup>
+            <Row>
+              <IconButton onClick={() => { setIsGrid(true) }}>
+                <ViewModuleIcon />
+              </IconButton>
+              <Divider orientation="vertical" variant="middle" flexItem />
+              <IconButton onClick={() => { setIsGrid(false) }}>
+                <TableRowsIcon />
+              </IconButton>
+            </Row>
+          </>
         </Stack>
         {filteredBerries && (
           <Grid
@@ -175,6 +193,7 @@ export default function FilterBerries({
                 removeBerry={removeBerry}
                 viewFlavor={showFlavor}
                 selected={filteredBerries.includes(berry)}
+                isGrid={isGrid}
               />
             })}
           </Grid>
