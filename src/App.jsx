@@ -31,7 +31,6 @@ function App() {
   const [apricorns, setApricorns] = useState(null);
   const [apricornsLoading, setApricornsLoading] = useState(true);
   const [apricornsError, setApricornsError] = useState(null);
-
   useFetch(setApricorns, setApricornsLoading, setApricornsError, apricornsURL);
 
   const [berries, setBerries] = useState(null);
