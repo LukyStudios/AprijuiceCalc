@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Golden Apple",
+        "biteTime": 0.25,
+        "rarity": 1,
+        "shiny": 2
+    },
+    {
+        "name": "Enchanted Golden Apple",
+        "biteTime": 0.1,
+        "rarity": 10,
+        "shiny": 10
+    },
+    {
+        "name": "Glistering Melon Slice",
+        "rarity": 1
+    },
+    {
+        "name": "Golden Carrot",
+        "rarity": 1
+    },
+    {
+        "name": "Starf Berry",
+        "shiny": 5
+    }
+]
