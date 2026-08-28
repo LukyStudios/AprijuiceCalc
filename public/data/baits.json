@@ -22,5 +22,300 @@
     {
         "name": "Starf Berry",
         "shiny": 5
+    },
+    {
+        "name": "Engima Berry",
+        "hidden": 0.05
+    },
+    {
+        "name": "Sweet Berries",
+        "biteTime": 0.125
+    },
+    {
+        "name": "Glow Berries",
+        "biteTime": 0.25
+    },
+    {
+        "name": "Custap Berry",
+        "biteTime": 0.25,
+        "reelChance": 0.7
+    },
+    {
+        "name": "Micle Berry",
+        "biteTime": 0.25,
+        "reelChance": 1
+    },
+    {
+        "name": "Oran Berry",
+        "biteTime": 0.33
+    },
+    {
+        "name": "Apple",
+        "biteTime": 0.5
+    },
+    {
+        "name": "Sitrus Berry",
+        "biteTime": 0.5
+    },
+    {
+        "name": "Leppa Berry",
+        "levelUp": 5
+    },
+    {
+        "name": "Hopo Berry",
+        "levelUp": 10
+    },
+    {
+        "name": "Pomeg Berry",
+        "evAttract": "HP"
+    },
+    {
+        "name": "Kelpsy Berry",
+        "evAttract": "Attack"
+    },
+    {
+        "name": "Qualot Berry",
+        "evAttract": "Defense"
+    },
+    {
+        "name": "Hondew Berry",
+        "evAttract": "Special Attack"
+    },
+    {
+        "name": "Grepa Berry",
+        "evAttract": "Special Defense"
+    },
+    {
+        "name": "Tamato Berry",
+        "evAttract": "Speed"
+    },
+    {
+        "name": "Jaboca Berry",
+        "friendship": 100
+    },
+    {
+        "name": "Kee Berry",
+        "female": 0.25
+    },
+    {
+        "name": "Maranga Berry",
+        "male": 0.25
+    },
+    {
+        "name": "Rowap Berry",
+        "reroll": 1
+    },
+    {
+        "name": "Lansat Berry",
+        "hpIV": 5
+    },
+    {
+        "name": "Liechi Berry",
+        "attackIV": 5
+    },
+    {
+        "name": "Ganlon Berry",
+        "defenseIV": 5
+    },
+    {
+        "name": "Petaya Berry",
+        "spAttackIV": 5
+    },
+    {
+        "name": "Apicot Berry",
+        "spDefenseIV": 5
+    },
+    {
+        "name": "Salac Berry",
+        "speedIV": 5
+    },
+    {
+        "name": "Lum Berry",
+        "dragonEgg": 10,
+        "monsterEgg": 10
+    },
+    {
+        "name": "Pecha Berry",
+        "water3Egg": 10,
+        "bugEgg": 10
+    },
+    {
+        "name": "Cheri Berry",
+        "fairyEgg": 10,
+        "grassEgg": 10
+    },
+    {
+        "name": "Chesto Berry",
+        "humanEgg": 10,
+        "flyingEgg": 10
+    },
+    {
+        "name": "Rawst Berry",
+        "fieldEgg": 10
+    },
+    {
+        "name": "Aspear Berry",
+        "water1Egg": 10,
+        "water2Egg": 10
+    },
+    {
+        "name": "Persim Berry",
+        "mineralEgg": 10,
+        "amorphousEgg": 10
+    },
+    {
+        "name": "Tanga Berry",
+        "bugType": 10
+    },
+    {
+        "name": "Colbur Berry",
+        "darkType": 10
+    },
+    {
+        "name": "Haban Berry",
+        "dragonType": 10
+    },
+    {
+        "name": "Rindo Berry",
+        "grassType": 10
+    },
+    {
+        "name": "Wacan Berry",
+        "electricType": 10
+    },
+    {
+        "name": "Roseli Berry",
+        "fairyType": 10
+    },
+    {
+        "name": "Chople Berry",
+        "fightingType": 10
+    },
+    {
+        "name": "Occa Berry",
+        "fireType": 10
+    },
+    {
+        "name": "Coba Berry",
+        "flyingType": 10
+    },
+    {
+        "name": "Kasib Berry",
+        "ghostType": 10
+    },
+    {
+        "name": "Shuca Berry",
+        "groundType": 10
+    },
+    {
+        "name": "Yache Berry",
+        "iceType": 10
+    },
+    {
+        "name": "Chilan Berry",
+        "normalType": 10
+    },
+    {
+        "name": "Kebia Berry",
+        "poisonType": 10
+    },
+    {
+        "name": "Payapa Berry",
+        "psychicType": 10
+    },
+    {
+        "name": "Charti Berry",
+        "rockType": 10
+    },
+    {
+        "name": "Babiri Berry",
+        "steelType": 10
+    },
+    {
+        "name": "Passho Berry",
+        "waterType": 10
+    },
+    {
+        "name": "Razz Berry",
+        "attackNature": 0.25
+    },
+    {
+        "name": "Figy Berry",
+        "attackNature": 0.5
+    },
+    {
+        "name": "Touga Berry",
+        "attackNature": 0.75
+    },
+    {
+        "name": "Spelon Berry",
+        "attackNature": 1
+    },
+    {
+        "name": "Pinap Berry",
+        "defenseNature": 0.25
+    },
+    {
+        "name": "Iapapa Berry",
+        "defenseNature": 0.5
+    },
+    {
+        "name": "Nomel Berry",
+        "defenseNature": 0.75
+    },
+    {
+        "name": "Belue Berry",
+        "defenseNature": 1
+    },
+    {
+        "name": "Bluk Berry",
+        "spAttackNature": 0.25
+    },
+    {
+        "name": "Wiki Berry",
+        "spAttackNature": 0.5
+    },
+    {
+        "name": "Cornn Berry",
+        "spAttackNature": 0.75
+    },
+    {
+        "name": "Pamtre Berry",
+        "spAttackNature": 1
+    },
+    {
+        "name": "Wepear Berry",
+        "spDefenseNature": 0.25
+    },
+    {
+        "name": "Aguav Berry",
+        "spDefenseNature": 0.5
+    },
+    {
+        "name": "Rabuta Berry",
+        "spDefenseNature": 0.75
+    },
+    {
+        "name": "Durin Berry",
+        "spDefenseNature": 1
+    },
+    {
+        "name": "Nanab Berry",
+        "speedNature": 0.25
+    },
+    {
+        "name": "Mago Berry",
+        "speedNature": 0.5
+    },
+    {
+        "name": "Magost Berry",
+        "speedNature": 0.75
+    },
+    {
+        "name": "Watmel Berry",
+        "speedNature": 1
+    },
+    {
+        "name": "Eggant Berry"
     }
 ]
